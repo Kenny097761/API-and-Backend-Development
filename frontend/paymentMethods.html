@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods - IoTBay</title>
+    <link rel="stylesheet" href="./css/paymentMethods.css">
+</head>
+<body class="payment-page">
+    <main class="payment-shell">
+        <header class="payment-page-header">
+            <div class="payment-page-actions">
+                <a href="./welcome.html" class="secondary-button">Back</a>
+            </div>
+            <h1 class="payment-heading">Payment Methods</h1>
+        </header>
+
+        <section class="payment-panel payment-list-panel">
+            <div class="payment-list-header">
+                <div>
+                    <h2>Your Payment Methods</h2>
+                </div>
+            </div>
+
+            <div class="payment-toolbar">
+                <div class="input-group">
+                    <label for="searchPaymentType">Search by Type</label>
+                    <select id="searchPaymentType">
+                        <option value="all">All Types</option>
+                        <option value="card">Credit or Debit Card</option>
+                        <option value="bank">Bank Account Transfer</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="payment-method-list" id="paymentMethodList"></div>
+            <p class="empty-payment-message" id="emptyPaymentMessage">No payment methods saved yet.</p>
+            <button type="button" class="add-payment-button" id="addPaymentButton" aria-label="Add payment method">+</button>
+        </section>
+
+        <section class="payment-modal hidden" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+            <div class="payment-panel payment-form-panel">
+                <button type="button" class="modal-close-button" id="closePaymentModal" aria-label="Close payment form">x</button>
+                <h2 id="paymentModalTitle">Add Payment Method</h2>
+
+                <form id="paymentMethodForm" novalidate>
+                    <input type="hidden" id="paymentMethodId">
+
+                    <div class="input-group">
+                        <label for="paymentType">Payment Type</label>
+                        <select id="paymentType">
+                            <option value="card">Credit or Debit Card</option>
+                            <option value="bank">Bank Account Transfer</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                        <div class="error" id="paymentTypeError"></div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" id="nickname" placeholder="Nickname">
+                        <div class="error" id="nicknameError"></div>
+                    </div>
+
+                    <div class="payment-fields" data-payment-fields="card">
+                        <div class="input-group">
+                            <label for="cardholderName">Cardholder Name</label>
+                            <input type="text" id="cardholderName" placeholder="Name">
+                            <div class="error" id="cardholderNameError"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" inputmode="numeric" placeholder="1234 5678 9012 3456">
+                            <div class="error" id="cardNumberError"></div>
+                        </div>
+
+                        <div class="payment-row">
+                            <div class="input-group">
+                                <label for="expiryDate">Expiry</label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY">
+                                <div class="error" id="expiryDateError"></div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cvv">CVV</label>
+                                <input type="password" id="cvv" inputmode="numeric" placeholder="123">
+                                <div class="error" id="cvvError"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-fields hidden" data-payment-fields="bank">
+                        <div class="input-group">
+                            <label for="accountName">Account Name</label>
+                            <input type="text" id="accountName" placeholder="Name">
+                            <div class="error" id="accountNameError"></div>
+                        </div>
+
+                        <div class="payment-row">
+                            <div class="input-group">
+                                <label for="bsb">BSB</label>
+                                <input type="text" id="bsb" inputmode="numeric" placeholder="123456">
+                                <div class="error" id="bsbError"></div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="accountNumber">Account Number</label>
+                                <input type="text" id="accountNumber" inputmode="numeric" placeholder="1234 5678">
+                                <div class="error" id="accountNumberError"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-fields hidden" data-payment-fields="paypal">
+                        <div class="input-group">
+                            <label for="paypalEmail">PayPal Email</label>
+                            <input type="email" id="paypalEmail" placeholder="me@example.com">
+                            <div class="error" id="paypalEmailError"></div>
+                        </div>
+                    </div>
+
+                    <div class="payment-form-actions">
+                        <button type="submit" id="submitPaymentButton">Add Payment Method</button>
+                        <button type="button" class="secondary-payment-button" id="cancelEditButton" hidden>Cancel Edit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="payment-modal hidden" id="deleteConfirmModal" role="dialog" aria-modal="true" aria-labelledby="deleteConfirmTitle">
+            <div class="payment-panel delete-confirmation-panel">
+                <h2 id="deleteConfirmTitle">Delete Payment Method?</h2>
+                <p>This payment method will be deleted after you confirm.</p>
+
+                <div class="delete-confirmation-actions">
+                    <button type="button" class="danger-payment-button" id="confirmDeleteButton">Confirm</button>
+                    <button type="button" class="secondary-payment-button" id="cancelDeleteButton">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/paymentMethods.js"></script>
+</body>
+</html>

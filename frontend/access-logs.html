@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/access-logs.css">
+    <link rel="stylesheet" href="./css/welcome.css">
+    <title>User Access Logs</title>
+</head>
+
+<body>
+    <main>
+        <div class="access-logs-page">
+            <!-- Back button -->
+            <div class="welcome-card-actions">
+                <a href="./welcome.html" class="secondary-button">Back</a>
+            </div>
+            <section class="access-logs-section">
+                <h1 class="access-logs-heading">User Access Logs</h1>
+
+                <!-- Access logs date filter -->
+                <div class="access-logs-date-filter">
+                    <input type="date" id="dateFilter">
+                    <button class="access-logs-search-btn" onclick="loadLogs()">Search</button>
+                </div>
+
+                <!-- Access logs table -->
+                <table class="access-logs-table">
+                    <thead>
+                        <tr>
+                            <th>Log ID</th>
+                            <th>Login Time</th>
+                            <th>Logout Time</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logTable"></tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <!-- Access logs JavaScript -->
+    <script src="./js/access-logs.js"></script>
+</body>
+
+</html>

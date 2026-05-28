@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoTBay Marketplace | My Shipments</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+    <link rel="stylesheet" href="./css/my-shipments.css">
+</head>
+<body>
+    <main class="welcome-page">
+        <section class="welcome-card shipments-card">
+            <div class="welcome-card-actions">
+                <a href="./welcome.html" class="secondary-button">Back</a>
+            </div>
+            <h1 id="pageHeading">Shipments</h1>
+            <p class="welcome-description">Track the progress of your orders.</p>
+
+            <div id="errorMessage" class="shipments-error" hidden></div>
+
+            <div class="shipments-tabs" id="shipmentsTabs" role="tablist">
+                <button type="button" class="shipments-tab is-active" data-status="all">All</button>
+                <button type="button" class="shipments-tab" data-status="pending">Pending</button>
+                <button type="button" class="shipments-tab" data-status="shipped">Shipped</button>
+                <button type="button" class="shipments-tab" data-status="delivered">Delivered</button>
+                <button type="button" class="shipments-tab" data-status="cancelled">Cancelled</button>
+            </div>
+
+            <div id="emptyState" class="shipments-empty" hidden>No shipments yet.</div>
+            <div id="shipmentsList" class="shipments-list"></div>
+        </section>
+    </main>
+    <script src="./js/my-shipments.js"></script>
+</body>
+</html>

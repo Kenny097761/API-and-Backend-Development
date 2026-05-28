@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoTBay Marketplace | Create Shipment</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+    <link rel="stylesheet" href="./css/create-shipment.css">
+</head>
+<body>
+    <main class="welcome-page">
+        <section class="welcome-card create-shipment-card">
+            <div class="welcome-card-actions">
+                <a href="./welcome.html" class="secondary-button">Back</a>
+            </div>
+            <h1>Create Shipment</h1>
+            <p class="welcome-description">Select a paid order to create a shipment for delivery.</p>
+
+            <div id="messageArea" class="cs-message" hidden></div>
+
+            <div class="cs-form">
+                <label for="orderSelect" class="cs-label">Paid order</label>
+                <select id="orderSelect" class="cs-select">
+                    <option value="">Loading orders…</option>
+                </select>
+                <button type="button" id="createBtn" class="primary-button">Create Shipment</button>
+            </div>
+        </section>
+    </main>
+    <script src="./js/create-shipment.js"></script>
+</body>
+</html>

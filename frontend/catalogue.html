@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Catalogue</title>
+
+    <link rel="stylesheet" href="css/catalogue.css">
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="top-bar">
+            <button onclick="window.location.href='welcome.html'">Back</button>
+        </div>
+        <div id="adminControls">
+            <h2>Add Device</h2>
+
+            <div class="form-section">
+                <input type="text" id="deviceName" placeholder="Device name">
+                <input type="text" id="deviceType" placeholder="Device type">
+                <input type="number" id="devicePrice" placeholder="Unit price">
+                <input type="number" id="deviceStock" placeholder="Stock">
+
+                <button onclick="addDevice()">Add Device</button>
+            </div>
+
+            <p id="message"></p>
+
+            <hr>
+        </div>
+
+        <h1>IoT Device Catalogue</h1>
+
+        <div class="search-section">
+            <input type="text" id="searchName" placeholder="Search by name">
+
+            <input type="text" id="searchType" placeholder="Search by type">
+
+            <button onclick="searchDevices()">Search</button>
+
+            <button onclick="loadDevices()">Show All</button>
+        </div>
+
+        <div id="deviceList"></div>
+
+
+    </div>
+
+    <script src="js/catalogue.js"></script>
+
+</body>
+</html>

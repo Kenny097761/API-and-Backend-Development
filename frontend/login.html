@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/login.css">
+  <title>IoTBay - Login</title>
+</head>
+
+<body>
+  <!-- Login form -->
+  <form class="login-form" id="login-form" novalidate>
+
+    <h2 class="login-heading">Login to IoTBay</h2>
+    <p class="login-subtitle">Sign in to continue to IoTBay Marketplace.</p>
+
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="me@example.com" required>
+      <p id="emailError"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="password" required>
+      <p id="passwordError"></p>
+    </div>
+
+    <button type="button" class="login-btn" id="loginButton">Login</button>
+
+    <p class="sign-up-cta">
+      Don't have an account?
+      <a href="/register.html">Sign up</a>
+    </p>
+
+    <!-- JavaScript -->
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

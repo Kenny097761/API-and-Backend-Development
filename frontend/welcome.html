@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoTBay Marketplace | Welcome</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+</head>
+
+<body>
+    <main class="welcome-page">
+        <section class="welcome-card">
+            <div class="welcome-card-actions">
+                <button type="button" class="secondary-button" id="logoutButton">Logout</button>
+            </div>
+            <h1>Welcome to IoTBay Marketplace</h1>
+            <p class="welcome-user" id="welcomeUser"></p>
+            <p class="welcome-description">
+                Discover smart home devices, connected accessories, and the latest tech essentials in one
+                clean, easy-to-browse marketplace experience.
+            </p>
+
+            <div class="welcome-button-group">
+                <button type="button" class="primary-button" onclick="window.location.href='./catalogue.html'">Start
+                    Shopping</button>
+                <a href="./paymentMethods.html" class="secondary-button" id="paymentMethodsButton">Payment Methods</a>
+                <a href="./my-shipments.html" class="secondary-button" id="shipmentsButton">My Shipments</a>
+                <a href="./create-shipment.html" class="secondary-button" id="createShipmentButton" hidden>Create
+                    Shipment</a>
+                <a href="./orders.html" class="secondary-button" id="ordersButton" hidden>Orders</a>
+                <!-- User Access Management / Access logs -->
+                <a href="./access-logs.html" class="secondary-button" id="accessLogsButton" hidden>Access Logs</a>
+                <!-- Update User -->
+                <a href="./update_user.html" class="secondary-button" id="updateUserButton" hidden>Update User</a>
+                <!-- Profile -->
+                <a href="./profile.html" class="secondary-button" id="profileButton" hidden>Profile</a>
+            </div>
+        </section>
+
+    </main>
+    <script src="./js/welcome.js"></script>
+    <script src="./js/logout.js"></script>
+</body>
+
+</html>

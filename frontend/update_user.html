@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Details</title>
+
+    <!-- This gets styles from css -->
+    <link rel="stylesheet" href="./css/update_user.css">
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="form-section">
+
+            <h1>Update User Details</h1>
+
+            <!-- Form sends data to Flask using POST -->
+            <form id="update-form" novalidate>
+
+                <!-- First Name -->
+                <label for="firstName">First Name</label>
+                <input type="text" name="first_name" id="firstName" placeholder="Enter first name" required>
+                <p id="firstNameError" class="error"></p>
+
+                <!-- Last Name -->
+                <label for="lastName">Last Name</label>
+                <input type="text" name="last_name" id="lastName" placeholder="Enter last name" required>
+                <p id="lastNameError" class="error"></p>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
+                <p id="emailError" class="error"></p>
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter password" required>
+                <p id="passwordError" class="error"></p>
+
+                <!-- Submit button -->
+                <button type="submit">Save Changes</button>
+
+            </form>
+
+            <!-- back button to take users back to home screen -->
+            <a href="./welcome.html" class="back-btn">← Back to Home</a>
+
+        </div>
+    </div>
+
+    <!-- Update User JavaScript -->
+    <script src="./js/update-user.js"></script>
+</body>
+
+</html>

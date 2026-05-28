@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoTBay Marketplace | Shipment Detail</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+    <link rel="stylesheet" href="./css/my-shipments.css">
+    <link rel="stylesheet" href="./css/shipment-detail.css">
+</head>
+<body>
+    <main class="welcome-page">
+        <section class="welcome-card shipments-card">
+            <div class="welcome-card-actions">
+                <a href="./my-shipments.html" class="secondary-button">Back to shipments</a>
+            </div>
+            <h1>Shipment Detail</h1>
+
+            <div id="messageArea" class="shipments-error" hidden></div>
+            <div id="shipmentDetails" class="shipment-detail-body"></div>
+
+            <div id="updateSection" class="shipment-update" hidden>
+                <label for="statusSelect" class="cs-label">Advance status to</label>
+                <select id="statusSelect" class="cs-select"></select>
+                <button type="button" id="updateBtn" class="primary-button">Update Status</button>
+            </div>
+
+            <div id="cancelSection" class="shipment-cancel" hidden>
+                <button type="button" id="cancelBtn" class="danger-button">Cancel Shipment</button>
+            </div>
+        </section>
+    </main>
+    <script src="./js/shipment-detail.js"></script>
+</body>
+</html>

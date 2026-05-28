@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Payment</title>
+  <link rel="stylesheet" href="./css/make-payment.css" />
+</head>
+<body>
+  <main class="payment-page">
+    <section class="payment-card">
+      <a class="back-link" href="./welcome.html">Back</a>
+      <p class="eyebrow">Payments</p>
+      <h1 class="payment-heading">Make Payment</h1>
+      <p class="payment-subtitle">Select an eligible order and one of your saved payment methods.</p>
+
+      <div id="message" class="message" aria-live="polite"></div>
+
+      <form id="paymentForm">
+        <div class="form-group">
+          <label for="orderSelect">Eligible order</label>
+          <select id="orderSelect" required>
+            <option value="">Loading orders...</option>
+          </select>
+        </div>
+
+        <div class="order-summary" id="orderSummary">
+          <p><strong>Order total:</strong> <span id="orderAmount">-</span></p>
+          <p><strong>Status:</strong> <span id="orderStatus">-</span></p>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethodSelect">Payment method</label>
+          <select id="paymentMethodSelect" required>
+            <option value="">Loading payment methods...</option>
+          </select>
+        </div>
+
+        <button type="submit" class="pay-btn">Pay Now</button>
+      </form>
+
+      <div class="helper-links">
+        <a href="./payment-history.html">View My Payment History</a>
+        <a href="./staff-payments.html">Staff Payments View</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/make-payment.js"></script>
+</body>
+</html>
