@@ -1,0 +1,14 @@
+# fill it as needed
+
+# Virtual environment
+virtualenvironment/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Database
+app.db
