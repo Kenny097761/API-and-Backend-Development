@@ -1,0 +1,141 @@
+.shipments-card {
+    text-align: left;
+}
+
+.shipments-card h1 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    padding: 0 80px;
+}
+
+@media (max-width: 540px) {
+    .shipments-card h1 {
+        padding: 0;
+    }
+}
+
+.shipments-card .welcome-description {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.shipments-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 18px 0 22px;
+}
+
+.shipments-tab {
+    border: 1px solid rgba(16, 37, 66, 0.15);
+    background: #ffffff;
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.shipments-tab:hover {
+    background: rgba(16, 37, 66, 0.05);
+}
+
+.shipments-tab.is-active {
+    background: var(--navy);
+    color: #ffffff;
+    border-color: var(--navy);
+}
+
+.shipments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.shipment-card {
+    background: #ffffff;
+    border: 1px solid rgba(16, 37, 66, 0.08);
+    border-radius: 18px;
+    padding: 22px 24px;
+    box-shadow: 0 8px 22px rgba(16, 37, 66, 0.08);
+    display: grid;
+    gap: 8px;
+}
+
+.shipment-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.shipment-card-title {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.05rem;
+}
+
+.shipment-card-row {
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.shipment-card-row .label {
+    color: var(--muted);
+    margin-right: 6px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-shipped {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-delivered {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-cancelled {
+    background: #e5e7eb;
+    color: #4b5563;
+    text-decoration: line-through;
+}
+
+.shipments-empty {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1rem;
+    padding: 36px 0;
+}
+
+.shipments-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: 600;
+}

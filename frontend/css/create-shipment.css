@@ -1,0 +1,66 @@
+.create-shipment-card {
+    text-align: center;
+}
+
+.create-shipment-card h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    padding: 0 80px;
+}
+
+@media (max-width: 540px) {
+    .create-shipment-card h1 {
+        padding: 0;
+    }
+}
+
+.create-shipment-card .welcome-description {
+    margin-bottom: 26px;
+}
+
+.cs-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 460px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cs-label {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.95rem;
+}
+
+.cs-select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(16, 37, 66, 0.2);
+    font-size: 0.98rem;
+    font-family: inherit;
+    background: #ffffff;
+    color: var(--ink);
+}
+
+.cs-form .primary-button {
+    margin-top: 6px;
+}
+
+.cs-message {
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.cs-message.is-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.cs-message.is-error {
+    background: #fee2e2;
+    color: #991b1b;
+}

@@ -1,0 +1,26 @@
+@import url("./make-payment.css");
+
+.payments-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.payment-item {
+  background: rgba(248, 251, 255, 0.95);
+  border: 1px solid rgba(16, 37, 66, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.payment-item h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.payment-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
