@@ -162,8 +162,8 @@ python -m backend.test.show_db_connection (win)
 python3 -m backend.test.show_db_connection (mac)
 ```
 
-## Shipments Readme - Zakariya Hage
-My feature for Assignment 2. Covers US-701 (view), US-702 (create), US-703 (update + soft cancel), US-704.
+## Shipments Readme 
+feature for Assignment 2. Covers US-701 (view), US-702 (create), US-703 (update + soft cancel), US-704.
 
 ### Setup
 
